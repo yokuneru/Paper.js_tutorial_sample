@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Load the Paper.js library -->
+  <script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-full.js"></script>
+  <!-- Define inlined PaperScript associate it with myCanvas -->
+  <script type="text/paperscript" canvas="myCanvas">
+
+    var Point1 = new Point(50, 50);
+    var Point2 = new Point(250, 150);
+
+    var myPath = new Path();
+    myPath.strokeColor = 'black';
+    myPath.add(Point1);
+    myPath.add(Point2);
+
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" style="border: 0.5px solid black" width="300" height="200"></canvas>
+</body>
+</html>

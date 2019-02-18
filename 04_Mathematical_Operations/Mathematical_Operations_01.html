@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Load the Paper.js library -->
+  <script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-full.js"></script>
+  <!-- Define inlined PaperScript associate it with myCanvas -->
+  <script type="text/paperscript" canvas="myCanvas">
+
+  // x = 0~50, y = 0 ~ 100の値を持つpointオブジェクトを作成
+  var point = new Point(50, 100) * Point.random();
+  console.log(point);
+
+  // w = 0~50, h = 0 ~ 100の値を持つsizeオブジェクトを作成
+  var size = new Size(50, 100) * Point.random();
+  console.log(size);
+
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas"></canvas>
+</body>
+</html>

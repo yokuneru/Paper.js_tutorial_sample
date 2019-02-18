@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Load the Paper.js library -->
+  <script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-full.js"></script>
+  <!-- Define inlined PaperScript associate it with myCanvas -->
+  <script type="text/paperscript" canvas="myCanvas">
+
+    // rectangleオブジェクトを作成（x, y, width, heightとも初期値0)
+    var rect = new Rectangle();
+    console.log(rect); // { x: 0, y: 0, width: 0, height: 0 }
+
+    // このようにrectangleオブジェクトのサイズを変更できます。
+    rect.size = new Size(100, 100);
+
+    // また、このように中心点を変更することができます。
+    rect.center = new Point(100, 100);
+    console.log(rect); // { x: 50, y: 50, width: 100, height: 100 }
+
+
+    var rectPath = new Path.Rectangle(rect);
+    rectPath.strokeColor = 'black';
+
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" style="border: 0.5px solid black" width="300" height="200"></canvas>
+</body>
+</html>

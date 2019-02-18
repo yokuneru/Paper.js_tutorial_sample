@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Load the Paper.js library -->
+  <script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-full.js"></script>
+  <!-- Define inlined PaperScript associate it with myCanvas -->
+  <script type="text/paperscript" canvas="myCanvas">
+
+    var point1 = new Point(50, 50);
+    var point2 = new Point(150, 150);
+    var rect = new Rectangle(point1, point2);
+    console.log(rect); // { x: 50, y: 50, width: 150, height: 150}
+
+    var rectPath = new Path.Rectangle(rect);
+    rectPath.strokeColor = 'black';
+
+  </script>
+</head>
+<body>
+  <canvas id="myCanvas" style="border: 0.5px solid black" width="300" height="200"></canvas>
+</body>
+</html>
